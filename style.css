@@ -1,0 +1,91 @@
+.container {
+  width: 500px;
+  height: 350px;
+  border: 1px solid #000;
+  background-color: #f2edd5;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.city {
+  color: black;
+  width: bolder;
+  border-radius: 10px;
+  border-color: black;
+  font-size: larger;
+  top: 80px;
+  left: 80px;
+}
+
+.search-Button {
+  background-color: #8ab9d0;
+  color: white;
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+.current-Button {
+  background-color: #aa9ec3;
+  color: white;
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+.button:hover {
+  background-color: transparent;
+  color: #000;
+  transition: 2s;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: lighter;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  margin: 8px;
+  line-height: 28px;
+}
+
+p {
+  font-size: 15px;
+  font-weight: lighter;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  margin: 5 auto;
+  margin-left: 10px;
+  text-align: left;
+}
+h2 {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: -30px;
+  text-align: center;
+}
+
+#date {
+  font-weight: bold;
+}
+.icon {
+  font-size: 40px;
+}
+
+.icon .fa-cloud-sun-rain {
+  color: #8ab9d0;
+}
+.icon .fa-sun {
+  color: yellow;
+}
+.icon .fa-cloud-sun {
+  color: gray;
+}
+.icon .fa-snowflake {
+  color: #8ab9d0;
+}
+.row {
+  justify-content: space-between;
+}
