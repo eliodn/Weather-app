@@ -76,7 +76,7 @@ let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
 let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("search", handleSearch);
+searchForm.addEventListener("submit", handleSearch);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
