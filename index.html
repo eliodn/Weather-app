@@ -24,92 +24,82 @@
     ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>weatherapp</title>
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class="container">
-      <div class="weatherapp">
+      <div class="weather-app">
       
-        <form class="search-form" id="search-form">
-          <div class="search d-flex">
-            <input type="search" 
-            placeholder="search a city"
-             class="city"
-             id="city-input" />
-            <span>
-              <button
-                type="button"
-                value="search"
-                class="search-Button"
-              >SEARCH</button>
-              <button
-                type="button"
-                value="current"
-                class="current-Button"
-                id="current-location-button"
-              >CURRENT</button>
-            </span>
+        <form id="search-form" class="search-form">
+          <div class="row">
+              <div class="col-7">
+                <input 
+                  type="search" 
+                  placeholder="search a city"
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off" 
+                />
+              </div>
+              <div class="col-2">
+                <button
+                  type="submit"
+                  value="search"
+                  class="search-Button"
+                >SEARCH</button>
+              </div>
+              <div class="col-3">
+                <button
+                  type="current"
+                  value="current"
+                  class="current-Button"
+                  id="current-location-button"
+                >CURRENT</button>
+              </div>
           </div>
         </form>
-
+        <div class="overview">
         <h1 id="city">
           </h1>
-      </d>
- 
-      <p id="date">
-          
-   </p> 
-    
-
- </div>
- <h2>
+          <ul>
+            <li>Last updated: <span id="date"></span></li>
+            <li id="description"></li>
+          </ul>
+        </div>
       
- <span class="temperature" id="temperature">-6</span>
- <span class="units"> 
-   °C 
- </span>
-
-        <p>
-          Humidity: <span id="humidity"></span>% <br />
-          Wind: <span id="wind"></span> km/h
-        </p> 
-      <br>
-     </h2>
-     <br>
-        <div class="row">
-          <div class="col-2 weekdays">
-            <div class="day">Tue</div>
-            <div class="icon">
-              <i class="fa-solid fa-cloud-sun"></i>
-            </div>
-            <div class="temp">-9°</div>
-          </div>
-
-          <div class="col-2 weekdays">
-            <div class="day">Wed</div>
-            <div class="icon"><i class="fa-solid fa-sun"></i></div>
-            <div class="temp">-4°</div>
-          </div>
-
-          <div class="col-2 weekdays">
-            <div class="day">Thue</div>
-            <div class="icon"><i class="fa-solid fa-sun"></i></div>
-            <div class="temp">-1°</div>
-          </div>
-
-          <div class="col-2 weekdays">
-            <div class="day">Fri</div>
-            <div class="icon"><i class="fa-solid fa-cloud-sun-rain"></i></div>
-            <div class="temp">-1°</div>
-          </div>
-
-          <div class="col-2 weekdays">
-            <div class="day">Sat</div>
-            <div class="icon"><i class="fa-solid fa-snowflake"></i></div>
-            <div class="temp">-3°</div>
-          </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="clearfix weather-temperature">
+        <img alt="Clear" id="icon" class="float-left" />
+        <div class="float-left">
+          <strong id="temperature"></strong
+          ><span class="units"
+            ><a href="#" id="celsius-link" class="active">°C</a> |
+            <a href="#" id="fahrenheit-link">°F</a></span
+          >
         </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <ul>
+        <li>Humidity: <span id="humidity"></span>%</li>
+        <li>Wind: <span id="wind"></span> km/h</li>
+      </ul>
+    </div>
+  </div>
+       
+        <div class="weather-forecast" id="forecast"></div>
         </div>
+        <small>
+          <a
+            href=""
+            target="_blank"
+            >Open-source code</a
+          >
+          by Lola Bourgeot
+        </small>
+     
       </div>
     </div>
     <script src="src/index.js"></script>
